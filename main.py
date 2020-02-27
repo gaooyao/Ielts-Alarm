@@ -1,15 +1,16 @@
 # coding = utf-8
-from inquiry import *
-from alarm import *
-from login_site import *
+from inquiry import inquiry_march_ukvi, inquiry_april_remain, inquiry_april_ukvi
+from alarm import alarm
+from login_site import login_by_window, login_by_command
 from selenium import webdriver
 import logging
-from logger_init import *
+from logger_init import log_init
 import datetime
+import time
 from selenium.webdriver.firefox.options import Options
 
-logger = logging.getLogger("log")
-log_init(logger)  # 初始化log
+log_init()  # 初始化log
+logger = logging.getLogger()
 
 num = 0  # 已刷新次数
 show_window = False  # 是否显示浏览器窗口

@@ -2,8 +2,8 @@
 import logging
 
 
-def log_init(logger):
-    dir(logging)
+def log_init():
+    logger = logging.getLogger()
     logger.setLevel(level=logging.INFO)
     fmt = '%(asctime)s - %(pathname)s[line:%(lineno)d] - %(levelname)s: %(message)s'
     formatter = logging.Formatter(fmt)

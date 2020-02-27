@@ -1,7 +1,6 @@
 from playsound import playsound
 import logging
 import requests
-from main import *
 from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
 

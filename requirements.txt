@@ -1,7 +1,7 @@
-requests==2.22.0
+requests==2.23.0
 pytesseract==0.3.2
 playsound==1.2.2
-pytest==3.4.2
+pytest==5.3.5
 selenium==3.141.0
 aliyun_python_sdk_core==2.13.14
 Pillow==7.0.0
