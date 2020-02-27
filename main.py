@@ -1,16 +1,15 @@
 # coding = utf-8
-from selenium import webdriver
 from inquiry import *
 from alarm import *
 from login_site import *
-from logger import *
+from selenium import webdriver
 import logging
+from logger_init import *
 import datetime
-
 from selenium.webdriver.firefox.options import Options
 
-log_init()  # 初始化log
 logger = logging.getLogger("log")
+log_init(logger)  # 初始化log
 
 num = 0  # 已刷新次数
 show_window = False  # 是否显示浏览器窗口
