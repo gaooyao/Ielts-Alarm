@@ -31,7 +31,7 @@ def inquiry_april_remain(browser):
     logger.info("开始查询四月份剩余雅思考位剩余情况")
     browser.find_element(By.CSS_SELECTOR, "li:nth-child(10) > a").click()
     time.sleep(WAIT_TIME_L)
-    browser.find_element(By.ID, "2020-04").click()
+    browser.find_element(By.ID, "2020-06").click()
     time.sleep(WAIT_TIME_S)
     browser.find_element(By.ID, "mvfSiteProvinces211").click()
     time.sleep(WAIT_TIME_S)
@@ -59,12 +59,14 @@ def inquiry_march_ukvi(browser):
     browser.find_element(By.CSS_SELECTOR, "li:nth-child(10) > a").click()  # 点击雅思考位查询
     # browser.find_element(By.CSS_SELECTOR, "li:nth-child(14) > a").click()  # 点击UKVI考位查询
     time.sleep(WAIT_TIME_L)
-    place_list = ["mvfSiteProvinces211", "mvfSiteProvinces212", "mvfSiteProvinces213", "mvfSiteProvinces214",
-                  "mvfSiteProvinces221", "mvfSiteProvinces222", "mvfSiteProvinces223", "mvfSiteProvinces231",
-                  "mvfSiteProvinces232", "mvfSiteProvinces233", "mvfSiteProvinces234", "mvfSiteProvinces235",
-                  "mvfSiteProvinces236", "mvfSiteProvinces237", "mvfSiteProvinces241", "mvfSiteProvinces242",
-                  "mvfSiteProvinces243", "mvfSiteProvinces244", "mvfSiteProvinces250", "mvfSiteProvinces251",
-                  "mvfSiteProvinces252", "mvfSiteProvinces253", "mvfSiteProvinces261"]
+    place_list = ["mvfSiteProvinces211", "mvfSiteProvinces212",
+                  # "mvfSiteProvinces213", "mvfSiteProvinces214",
+                  # "mvfSiteProvinces221", "mvfSiteProvinces222", "mvfSiteProvinces223", "mvfSiteProvinces231",
+                  # "mvfSiteProvinces232", "mvfSiteProvinces233", "mvfSiteProvinces234", "mvfSiteProvinces235",
+                  # "mvfSiteProvinces236", "mvfSiteProvinces237", "mvfSiteProvinces241", "mvfSiteProvinces242",
+                  # "mvfSiteProvinces243", "mvfSiteProvinces244", "mvfSiteProvinces250", "mvfSiteProvinces251",
+                  # "mvfSiteProvinces252", "mvfSiteProvinces253", "mvfSiteProvinces261"
+                  ]
     for item in place_list:
         browser.find_element(By.ID, "2020-04").click()  # 点击月份选择框
         time.sleep(WAIT_TIME_S)

@@ -7,7 +7,8 @@ import logging
 from logger_init import log_init
 import datetime
 import time
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
 log_init()  # 初始化log
 logger = logging.getLogger()
@@ -21,12 +22,12 @@ show_window = False  # 是否显示浏览器窗口
 if __name__ == "__main__":
     if show_window:
         # 设置浏览器有界面模式
-        browser = webdriver.Firefox()  # 初始化浏览器引擎
+        browser = webdriver.Chrome()  # 初始化浏览器引擎
     else:
         # 设置浏览器无界面模式
         browser_options = Options()
         browser_options.add_argument('--headless')
-        browser = webdriver.Firefox(firefox_options=browser_options)
+        browser = webdriver.Chrome(chrome_options=browser_options)
 
     logger.info("浏览器初始化成功")
 
@@ -67,4 +68,7 @@ if __name__ == "__main__":
         except Exception as e:
             logger.error(e.args)
             continue
-        time.sleep(2)
+        time.sleep(5)
+
+        browser.find_element_by_xpath("//*[text()='我的主页']").click()  # 返回主页
+        time.sleep(5)
